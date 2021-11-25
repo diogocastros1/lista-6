@@ -1,2 +1,2 @@
-# lista-6
+# Lista 6
 Resolução da L6
