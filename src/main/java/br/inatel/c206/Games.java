@@ -29,4 +29,6 @@ public class Games {
         this.other_sales = other_sales;
         this.global_sales = global_sales;
     }
+
+
 }
