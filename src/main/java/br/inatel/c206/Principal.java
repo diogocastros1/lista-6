@@ -1,5 +1,6 @@
 package br.inatel.c206;
 
+import br.inatel.c206.enums.Platforms;
 import br.inatel.c206.enums.Publishers;
 import br.inatel.c206.utils.CSVUtils;
 import br.inatel.c206.utils.ListaGames;
@@ -9,20 +10,20 @@ import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) {
-        String caminho = "vendas-games.csv";
 
         Scanner input = new Scanner(System.in);
+        int selecao = 0;
 
         Menu.menuInicial();
+        selecao = input.nextInt();
 
-        if(input.nextInt() == 1){
-            CSVUtils.readDataLineByLine(caminho);
+        if(selecao == 1){
+            CSVUtils.readDataLineByLine();
         }
 
-        if(input.nextInt() == 2){
-            ListaGames.addLista(caminho);
+        if(selecao == 2){
+            ListaGames.addLista();
             System.out.println("Entre com o nome da desenvolvedora:");
-
             ListaGames.filtrarPlataforma(input.next());
 
         }

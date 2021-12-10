@@ -6,11 +6,11 @@ import java.io.FileReader;
 public class CSVUtils {
     // Java code to illustrate reading a
     // CSV file line by line
-    public static void readDataLineByLine(String file) {
+    public static void readDataLineByLine() {
         try {
             // Create an object of filereader
             // class with CSV file as a parameter.
-            FileReader filereader = new FileReader(file);
+            FileReader filereader = new FileReader(Caminhos.file);
 
             // create csvReader object passing
             // file reader as a parameter
