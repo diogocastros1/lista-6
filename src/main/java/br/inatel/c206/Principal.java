@@ -25,13 +25,13 @@ public class Principal {
                 System.out.println("Escolha uma das desenvolvedoras abaixo:");
 
                 for (Publishers dev : Publishers.values()) {
-                    System.out.println(dev.ordinal() + ". " + dev.getDescricao());
+                    System.out.println(dev.ordinal() + 1 + ". " + dev.getDescricao());
                 }
 
                 selecao = input.nextInt();
 
                 for (Publishers dev : Publishers.values()) {
-                    if (selecao == dev.ordinal()) {
+                    if ((selecao - 1) == dev.ordinal()) {
                         ListaGames.filtrarDev(dev.getDescricao());
 
                     }
@@ -44,13 +44,13 @@ public class Principal {
                 System.out.println("Selecione uma das  com o nome da plataforma:");
 
                 for (Platforms plat : Platforms.values()) {
-                    System.out.println(plat.ordinal() + ". " + plat.getDescricao());
+                    System.out.println(plat.ordinal() + 1 + ". " + plat.getDescricao());
                 }
 
                 selecao = input.nextInt();
 
                 for (Platforms plat : Platforms.values()) {
-                    if (selecao == plat.ordinal()) {
+                    if ((selecao - 1) == plat.ordinal()) {
                         ListaGames.filtrarPlat(plat.getDescricao());
                     }
                 }
