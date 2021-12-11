@@ -1,7 +1,5 @@
 package br.inatel.c206;
 
-import br.inatel.c206.enums.Platforms;
-import br.inatel.c206.enums.Publishers;
 import br.inatel.c206.utils.CSVUtils;
 import br.inatel.c206.utils.ListaGames;
 import br.inatel.c206.utils.Menu;
@@ -16,17 +14,24 @@ public class Principal {
 
         Menu.menuInicial();
         selecao = input.nextInt();
+        while (selecao != 0) {
+            if (selecao == 1) {
+                CSVUtils.readDataLineByLine();
+            }
 
-        if(selecao == 1){
-            CSVUtils.readDataLineByLine();
+            if (selecao == 2) {
+                ListaGames.addLista();
+                System.out.println("Entre com o nome da Desenvolvedora:");
+                ListaGames.filtrarDev(input.next());
+            }
+
+            if (selecao == 3) {
+                ListaGames.addLista();
+                System.out.println("Entre com o nome da plataforma:");
+                ListaGames.filtrarPlat(input.next());
+            }
+            Menu.menuInicial();
+            selecao = input.nextInt();
         }
-
-        if(selecao == 2){
-            ListaGames.addLista();
-            System.out.println("Entre com o nome da desenvolvedora:");
-            ListaGames.filtrarPlataforma(input.next());
-
-        }
-
     }
 }
