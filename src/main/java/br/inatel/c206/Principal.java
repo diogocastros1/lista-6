@@ -30,7 +30,7 @@ public class Principal {
                 System.out.println("Entre com o nome da plataforma:");
                 ListaGames.filtrarPlat(input.next());
             }
-            Menu.menuInicial();
+            Menu.menuCorrente();
             selecao = input.nextInt();
         }
     }

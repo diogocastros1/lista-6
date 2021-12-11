@@ -1,20 +1,11 @@
 package br.inatel.c206.utils;
 
 import br.inatel.c206.Games;
-import br.inatel.c206.enums.Platforms;
 import com.opencsv.CSVReader;
-import com.opencsv.bean.CsvToBean;
-import com.opencsv.bean.CsvToBeanBuilder;
 
 import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class ListaGames {
 
@@ -93,6 +84,7 @@ public class ListaGames {
                                 l.getGlobal_sales() + " "
                 );
             });
+            System.out.println();
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -153,6 +145,7 @@ public class ListaGames {
                                 l.getGlobal_sales() + " "
                 );
             });
+            System.out.println();
         }
         catch (Exception e) {
             e.printStackTrace();
